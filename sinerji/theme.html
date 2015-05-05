@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="description" content="Turkxoops.com | XOOPS Turkiye Resmi Site" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="okvir">
+  <tr>
+    <td>
+      <table width="100%" cellspacing="0">
+        <tr id="header">
+          <td id="headerlogo"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/sinerji.gif" alt="Sinerji" border="0" /></a></td>
+         
+        </tr>
+       
+      </table>
+	   
+	  <table cellspacing="0" cellpadding="0" height="22px" width="100%" border="0">
+                <tr align="center"> 
+                  <td width="288" bgcolor="#F97319"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/index.php">Ana Sayfa</a></td>
+                  
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/haberler/" target="_blank">Haberler</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/irtibat/">Ýletiþim</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/modules/newbb/">Forumlar</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="<{$xoops_url}>/">Köþe Yazýlarý</a></td>
+
+                  <td width="1" bgcolor="#d7d7d7"></td>
+                  <td id="headmenu"><a class="menuHead" 
+                  href="http://www.turkxoops.com">Bizim Hakkýmýzda</a></td>
+                </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" id="glavna">
+        <td id="leftcolumn"> 
+          <!-- Start left blocks loop -->
+          <{foreach item=block from=$xoops_lblocks}> <div class="<{cycle values="blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End left blocks loop -->
+          <br /> <br />
+          </td>
+        <td id="centercolumn"> 
+          <!-- Display center blocks if any -->
+          <{if $xoops_showcblock == 1}> <table class="sadrzaj" cellspacing="0">
+            <tr> 
+              <td id="centerCcolumn" colspan="2"> 
+                <!-- Start center-center blocks loop -->
+                <{foreach item=block from=$xoops_ccblocks}> <table align="center" cellpadding="0" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-center blocks loop -->
+              </td>
+            </tr>
+            <tr> 
+              <td id="centerLcolumn"> 
+                <!-- Start center-left blocks loop -->
+                <{foreach item=block from=$xoops_clblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-left blocks loop -->
+              </td>
+              <td id="centerRcolumn"> 
+                <!-- Start center-right blocks loop -->
+                <{foreach item=block from=$xoops_crblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                  <tr> 
+                    <td> <div class="blockTitle"><{$block.title}></div>
+                      <div class="blockContent"><{$block.content}></div></td>
+                  </tr>
+                </table>
+                <{/foreach}> 
+                <!-- End center-right blocks loop -->
+              </td>
+            </tr>
+          </table>
+          <{/if}> 
+          <!-- End display center blocks -->
+          <div id="content"> <{$xoops_contents}> </div>
+          <br /> <br /> <br /> </td>
+        <{if $xoops_showrblock == 1}> 
+        <td id="rightcolumn"> 
+          <!-- Start right blocks loop -->
+          <{foreach item=block from=$xoops_rblocks}> <div class="<{cycle values="blockTitle,blockTitle"}>"><{$block.title}></div>
+          <div class="blockContent"><{$block.content}></div>
+		  <img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" />
+          <{/foreach}> 
+          <!-- End right blocks loop -->
+          <br /> <br /> </td>
+        <{/if}> </tr>
+        <tr> 
+          <td colspan="3"></td>
+        </tr>
+    </table> </td>
+  </tr>
+</table>
+<table width="758"  border="0" align="center" cellpadding="0" cellspacing="0" class="dole">
+  <tr>
+    <td><div class="footer">
+        <{$xoops_footer}> &nbsp;|&nbsp; 
+       Sinerji &nbsp;|&nbsp; by <a href="http://www.turkxoops.com" target="_blank">xoops</a> 
+        <br />
+</div></td>
+  </tr>
+</table>
+
+<br>
+</body>
+</html>
